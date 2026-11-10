@@ -4,14 +4,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sajeer ❤️ Izza</title>
 <style>
-body{margin:0;background:#0f2a1d;color:#fff;font-family:Georgia,serif;text-align:center;min-height:100vh;display:flex;align-items:center;justify-content:center}
-.card{background:#fff8e7;color:#3a2a00;width:90%;max-width:360px;border-radius:16px;padding:22px;display:none}
+*{box-sizing:border-box}
+body{margin:0;background:#0f2a1d;color:#fff;font-family:Georgia,serif;text-align:center;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff8e7;color:#3a2a00;width:100%;max-width:420px;border-radius:20px;padding:32px 24px;display:none}
 .card.show{display:block}
-h1{color:#b8860b;margin:5px 0}
-.env{cursor:pointer}
-.env .top{font-size:80px}
-.env p{color:#ffd700}
-button{background:#b8860b;color:#fff;border:0;padding:12px 20px;border-radius:20px;font-size:16px;margin-top:10px}
+h1{color:#b8860b;font-size:42px;line-height:1.1;margin:10px 0}
+.env{cursor:pointer;width:100%}
+.env .top{font-size:150px;line-height:1}
+.env h2{font-size:32px;color:#ffd700;margin:15px 0 5px}
+.env p{font-size:22px;margin:0}
+.card p{font-size:20px;line-height:1.5}
+.card b{font-size:21px}
+button{background:#b8860b;color:#fff;border:0;padding:16px 30px;border-radius:30px;font-size:22px;margin-top:15px;width:100%}
 </style>
 </head>
 <body>
@@ -19,17 +23,17 @@ button{background:#b8860b;color:#fff;border:0;padding:12px 20px;border-radius:20
 <div id="cover">
   <div class="env" onclick="openCard()">
     <div class="top">✉️</div>
-    <h2 style="color:#ffd700">Tap to Open</h2>
+    <h2>Tap to Open</h2>
     <p>Sajeer ❤️ Izza</p>
   </div>
 </div>
 
 <div id="invite" class="card">
-  <p>✦ Bismillah ✦</p>
+  <p style="font-size:24px">✦ Bismillah ✦</p>
   <h1>Sajeer<br>❤️<br>Izza</h1>
   <p>We are getting married!</p>
-  <p><b>Date:</b> Coming Soon</p>
-  <p><b>Venue:</b> Talipparamba, Kerala</p>
+  <p><b>Date:</b> 24 Dec 2026</p>
+  <p><b>Venue:</b> Sireen, Kannur</p>
   <p>Your presence is our blessing.</p>
   <button onclick="alert('Thank you! See you there ❤️')">RSVP ❤️</button>
 </div>
