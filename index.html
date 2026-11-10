@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sajeer ❤ Izza | 24 Dec 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0f2e26;color:#fff;overflow-x:hidden}
+a{color:#d4af6a;text-decoration:none}
+
+/* ENVELOPE SCREEN */
+#envelopeScreen{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;background:radial-gradient(circle,#1a4a3d,#0f2e26)}
+#envelopeScreen h3{letter-spacing:4px;font-weight:300;color:#d4af6a;font-size:13px}
+#envelopeScreen h1{font-family:'Great Vibes',cursive;font-size:62px;line-height:1.1;margin:15px 0;color:#fff}
+#envelopeScreen p{opacity:.8;font-size:14px}
+.envelope{width:300px;height:200px;background:#e8d5a8;position:relative;margin:35px 0;border-radius:10px;cursor:pointer;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.envelope:before{content:'';position:absolute;top:0;left:0;width:0;height:0;border-left:150px solid transparent;border-right:150px solid transparent;border-top:110px solid #d4af6a;transform-origin:top;transition:.8s;z-index:3;border-radius:10px 10px 0 0}
+.envelope.open:before{transform:rotateX(180deg);z-index:1}
+.envelope .seal{width:60px;height:60px;background:#c49a3c;border-radius:50%;position:absolute;top:80px;left:120px;z-index:4;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+.envelope .letter{position:absolute;top:10px;left:15px;right:15px;height:170px;background:#fffdf5;color:#333;border-radius:6px;padding:15px;text-align:center;transition:.8s;z-index:2}
+.envelope.open .letter{transform:translateY(-90px)}
+.btn{background:#d4af6a;color:#0f2e26;border:none;padding:14px 30px;border-radius:30px;font-weight:600;font-size:16px;cursor:pointer;margin-top:10px}
+.btn-outline{background:transparent;color:#d4af6a;border:1px solid #d4af6a}
+
+/* MAIN INVITE */
+#main{display:none;min-height:100vh}
+nav{position:sticky;top:0;background:rgba(15,46,38,.95);padding:14px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;z-index:10;border-bottom:1px solid #2a5a4a}
+nav a{font-size:13px;padding:6px 12px;border-radius:20px}
+nav a.active{background:#d4af6a;color:#0f2e26}
+.page{display:none;padding:30px 20px;max-width:600px;margin:0 auto;text-align:center;animation:fade .5s}
+.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.script{font-family:'Great Vibes',cursive;font-size:52px;color:#f5d98b;line-height:1}
+.gold{color:#d4af6a;letter-spacing:3px;font-size:12px;text-transform:uppercase}
+.card{background:#173f33;border:1px solid #2a5a4a;padding:22px;border-radius:16px;margin:18px 0;text-align:left}
+.card h3{color:#f5d98b;margin-bottom:8px}
+.card p{font-size:14px;line-height:1.7;opacity:.9}
+.count{display:flex;justify-content:center;gap:10px;margin:20px 0}
+.count div{background:#fff;color:#0f2e26;padding:12px 10px;border-radius:12px;min-width:68px}
+.count b{font-size:22px;display:block}
+.count span{font-size:11px;opacity:.7}
+input,textarea,select{width:100%;padding:12px;border-radius:10px;border:none;margin:8px 0;background:#fff;color:#333}
+.footer{padding:30px;text-align:center;opacity:.6;font-size:12px}
+</style>
+</head>
+<body>
+
+<!-- ENVELOPE -->
+<div id="envelopeScreen">
+  <h3>YOU ARE INVITED TO THE WEDDING OF</h3>
+  <h1>Sajeer<br>&<br>Izza</h1>
+  <p>24th December 2026 • Thursday<br>Save The Date</p>
+  <div class="envelope" id="envelope" onclick="openInvite()">
+    <div class="letter"><b style="font-family:'Great Vibes',cursive;font-size:26px">Sajeer & Izza</b><br><small>24.12.2026</small><br><br>❤</div>
+    <div class="seal">❤</div>
+  </div>
+  <p>Tap the envelope to open</p>
+  <button class="btn" onclick="openInvite()">Open Invitation ✉️</button>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+<nav>
+  <a href="#/home" id="nav-home">Home</a>
+  <a href="#/story" id="nav-story">Our Story</a>
+  <a href="#/venue" id="nav-venue">Venue</a>
+  <a href="#/rsvp" id="nav-rsvp">RSVP</a>
+</nav>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <p class="gold">Bismillahir Rahmanir Raheem</p>
+  <p style="margin:12px 0;font-size:14px;line-height:1.8">With the blessings of Almighty Allah<br>and our beloved families</p>
+  <div class="script">Sajeer</div>
+  <p style="margin:5px 0">❤</p>
+  <div class="script">Izza</div>
+  <p class="gold" style="margin-top:15px">Request the honour of your presence<br>at their Nikah Ceremony</p>
+  <div class="card" style="text-align:center">
+    <h3>Thursday • 24th December 2026</h3>
+    <p>Save the date. Countdown begins...</p>
+    <div class="count">
+      <div><b id="d">0</b><span>DAYS</span></div>
+      <div><b id="h">0</b><span>HOURS</span></div>
+      <div><b id="m">0</b><span>MINS</span></div>
+      <div><b id="s">0</b><span>SECS</span></div>
+    </div>
+  </div>
+  <a href="#/venue"><button class="btn">View Venue & Time →</button></a>
+  <br><br>
+  <a href="#/rsvp"><button class="btn btn-outline">Confirm Your Presence</button></a>
+</div>
+
+<!-- STORY -->
+<div id="page-story" class="page">
+  <div class="script">Our Story</div>
+  <p class="gold">Written by Allah, Sealed by Love</p>
+  <div class="card"><h3>🤲 A Dua Answered</h3><p>Two families, two hearts, one beautiful destiny. What started as a prayer became the most beautiful chapter of our lives.</p></div>
+  <div class="card"><h3>💍 The Promise</h3><p>On 24th December 2026, in front of our loved ones, we will say Qubool Hai and begin our forever, Insha Allah.</p></div>
+  <div class="card"><h3>❤️ Sajeer & Izza</h3><p>"And We created you in pairs." - Qur'an 78:8</p></div>
+</div>
+
+<!-- VENUE -->
+<div id="page-venue" class="page">
+  <div class="script">When & Where</div>
+  <div class="card"><h3>📅 Nikah Ceremony</h3><p><b>Date:</b> Thursday, 24th December 2026<br><b>Time:</b> 11:00 AM Onwards<br><b>Venue:</b> Talipparamba, Kannur, Kerala<br><small style="opacity:.7">*Edit this venue in code - search for
